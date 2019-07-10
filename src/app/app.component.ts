@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'star-wars-movies';
+  searcheTitle = '';
 
   movies$ = new Observable<Film[]>();
 

@@ -1,7 +1,9 @@
 <h2>Star Wars Movies:</h2>
+
+<input [(ngModel)]="searcheTitle" placeholder="Filter by Movie Title">
 <table>
   <tbody>
-    <tr *ngFor="let movie of movies$ | async">
+    <tr *ngFor="let movie of (movies$ | async | filterByTitles:searcheTitle)">
       <td class="title-column">{{ movie.title }}</td>
       <td>{{ movie.director }}</td>
       <td>{{ movie.release_date | date }}</td>

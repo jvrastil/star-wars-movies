@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+
+  .details {
+    min-width: 280px;
+  }
+}
+
+.error-msg {
+  color: red;
+}

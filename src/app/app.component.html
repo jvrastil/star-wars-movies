@@ -2,13 +2,25 @@
 
 <input [(ngModel)]="searcheTitle" placeholder="Filter by Movie Title">
 <table>
+  <thead>
+  <tr >
+    <td class="title-column">{{ 'Title' }}</td>
+    <td>{{ 'Director' }}</td>
+    <td>{{ 'Release Date' }}</td>
+  </tr>
+  </thead>
   <tbody>
-    <tr *ngFor="let movie of (movies$ | async | filterByTitles:searcheTitle)">
-      <td class="title-column">{{ movie.title }}</td>
-      <td>{{ movie.director }}</td>
-      <td>{{ movie.release_date | date }}</td>
-    </tr>
+  <tr
+    *ngFor="let movie of movies$ | async | filterByTitles:searcheTitle | paginate: { itemsPerPage: itemsPerPage,
+        currentPage: currentPage }"
+  >
+    <td class="title-column">{{ movie.title }}</td>
+    <td>{{ movie.director }}</td>
+    <td>{{ movie.release_date | date }}</td>
+  </tr>
   </tbody>
 </table>
+
+<pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
 
 

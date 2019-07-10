@@ -6,7 +6,6 @@ import { Film } from 'angular2-swapi';
 })
 export class FilterByTitlesPipe implements PipeTransform {
   transform(items: Film[], searchText: string): any[] {
-    console.log(9, items, searchText);
     if (!items) {
       return [];
     }

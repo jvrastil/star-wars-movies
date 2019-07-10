@@ -1,4 +1,10 @@
 table {
+  thead {
+    td {
+      border-bottom: 2px solid black;
+    }
+  }
+
   tr {
     td {
       width: 170px;
@@ -8,4 +14,8 @@ table {
       }
     }
   }
+}
+
+input {
+  margin-bottom: 10px;
 }

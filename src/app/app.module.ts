@@ -6,6 +6,7 @@ import { Angular2SwapiModule } from 'angular2-swapi';
 import { AppComponent } from './app.component';
 import { FilterByTitlesPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     Angular2SwapiModule,
     FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
